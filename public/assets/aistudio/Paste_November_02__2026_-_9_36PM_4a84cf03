@@ -1,0 +1,925 @@
+CAPITALVEST — COMPLETE WEBSITE BUILD SPECIFICATION
+Build a complete, premium, responsive, full-stack wealth management web application named CapitalVest.
+Brand tagline: Building Wealth. Securing Generations.
+Brand positioning: A modern wealth management command centre that helps financial advisors manage client relationships, monitor portfolios, track financial goals, evaluate financial health, identify risks, and generate professional financial reports. The platform should combine elegant client-facing experiences with powerful internal business operations.
+This is not a static website, a simple dashboard mockup, or a landing-page-only project. Build an interconnected application with working navigation, real forms, realistic calculations, interactive charts, persistent records, secure authentication, data synchronization, and complete workflows.
+1. Non-negotiable project requirements
+1.	Build the entire application, from the public welcome page through authentication, onboarding, dashboards, every management module, settings, and logout.
+2.	Prioritize Wealth Management Dashboard & Analytics and Excel/Spreadsheet Integration.
+3.	Do not build, replace, activate, or modify an AI Advisor, Gemini chatbot, or other AI advisory feature in this version. Leave an appropriate future integration point in the architecture, but do not display a nonfunctional AI chat widget.
+4.	Use Indian financial conventions, including INR (₹), Indian number formatting, DD/MM/YYYY dates, Indian names, and the Asia/Kolkata time zone.
+5.	Use fictional demo clients and clearly label demo financial data as illustrative. Do not use real customer information.
+6.	Use a real database and authentication. Do not pretend local browser state is a secure backend.
+7.	Every visible button, link, filter, tab, form, search field, chart control, export option, and navigation item must work or be explicitly disabled with an explanation.
+8.	Do not leave placeholder pages, empty navigation destinations, fake success messages, or unfinished sections.
+9.	Build the complete application first. Then test all major flows, fix errors, and refine the visual design without removing functionality.
+2. Technology stack and architecture
+Use the following architecture unless a technical limitation requires an equivalent, clearly explained implementation.
+•	Frontend: React, TypeScript, and a modern component-based architecture.
+•	Styling: Tailwind CSS or an equivalent consistent styling system.
+•	Icons: Lucide icons.
+•	Charts: Recharts or another reliable React chart library.
+•	Backend: Node.js server-side runtime with secure API endpoints.
+•	Database: Firebase Cloud Firestore.
+•	Authentication: Firebase Authentication, including Google Sign-In and email/password authentication where supported.
+•	Spreadsheet integration: Google Sheets API or Google Workspace integration for live spreadsheet synchronization, plus an Excel .xlsx and .csv import workflow.
+•	File processing: A suitable spreadsheet parsing library such as SheetJS.
+•	PDF reports: A reliable PDF generation library.
+•	Exports: CSV and Excel-compatible downloads.
+•	Deployment: Ensure the application can be tested in AI Studio and prepared for deployment through its supported hosting workflow.
+Keep data-access logic, business calculations, authentication, spreadsheet processing, and presentation components separate.
+Store credentials and API secrets securely on the server. Never expose service-account credentials, private keys, or sensitive tokens in frontend code.
+Use Firestore security rules and server-side authorization checks to enforce user roles and record access.
+If Firebase setup is offered, configure it rather than silently substituting a local-only prototype. If a required external integration needs consent, credentials, or configuration, build the setup interface and clearly explain the remaining step.
+3. Brand identity and visual direction
+CapitalVest should feel like an established, premium wealth management firm.
+The visual inspiration should be a combination of private banking, modern fintech, and refined financial analytics.
+Color palette
+•	Deep midnight navy: #101C2C
+•	Dark blue: #172B46
+•	Rich emerald: #147D64
+•	Champagne gold: #C6A76A
+•	Warm ivory: #F7F5F0
+•	Pure white: #FFFFFF
+•	Slate text: #5B6677
+•	Light borders: #E5E7EB
+•	Risk red: #C94C4C
+•	Caution amber: #D99A31
+Use navy for trust, emerald for positive financial indicators, and gold sparingly for premium highlights.
+Provide a light dashboard theme as the default. Offer an optional dark theme in settings.
+Typography
+Use a sophisticated serif font for selected marketing headlines and a clean sans-serif font for the application interface.
+Suggested combination:
+•	Headings: DM Serif Display or an equivalent.
+•	Interface and body text: Inter or Manrope.
+Use generous spacing, consistent typography, fine borders, subtle shadows, restrained gradients, elegant cards, and carefully designed empty states.
+Avoid excessive glassmorphism, neon colors, oversized rounded cards, cartoon illustrations, unnecessary animation, and generic template styling.
+Logo
+Create a refined CapitalVest wordmark with a minimalist geometric monogram inspired by a growing investment portfolio, an upward trajectory, or a protective architectural form.
+The logo should work on a dark background, white background, and compact sidebar.
+Do not use an unrelated stock-company logo.
+Animation
+Use subtle page transitions, chart entrance animations, hover states, skeleton loading, and smooth dropdowns.
+Respect reduced-motion preferences. Animations must never delay essential functionality.
+4. Public website: welcome experience
+Create a polished public-facing website before the user logs in.
+Page 1: Welcome and homepage
+Design a premium full-screen hero section.
+Navigation bar:
+•	CapitalVest logo.
+•	Home.
+•	Our Approach.
+•	Wealth Solutions.
+•	Platform.
+•	Security.
+•	Contact.
+•	Sign In.
+•	A prominent Get Started button.
+Hero headline:
+Build Wealth with Clarity. Protect What Matters.
+Supporting text:
+“Your financial journey deserves a clearer view. CapitalVest brings portfolio visibility, goal tracking, financial planning insights, and personalized wealth management workflows together in one secure platform.”
+Primary CTA: Explore the Platform.
+Secondary CTA: Client Login.
+Use a high-quality, elegant visual showing a contemporary financial workspace, refined architectural geometry, or an abstract investment-growth composition. The visual should complement the layout instead of overpowering it.
+Below the hero, include:
+Financial clarity, all in one place
+Present four polished feature sections:
+1.	Portfolio Intelligence: Understand allocations, returns, and portfolio changes.
+2.	Goal-Based Planning: Connect financial assets to meaningful life goals.
+3.	Client Relationship Management: Keep profiles, reviews, and follow-ups organized.
+4.	Connected Financial Data: Import and synchronize spreadsheet-based records.
+Add a sample portfolio preview with illustrative data, a clean allocation chart, a sample financial goal tracker, and a visual report preview.
+Do not present fabricated client testimonials, fake assets under management, unverified performance claims, or invented regulatory registrations.
+Add an Our Approach section explaining clarity, consistency, disciplined planning, and responsible data management.
+Add a final CTA:
+Your next financial chapter starts with clarity.
+Buttons: Get Started and Sign In.
+Page 2: About CapitalVest
+Include:
+•	Brand mission.
+•	Wealth management philosophy.
+•	Client-first approach.
+•	Financial transparency.
+•	Data security principles.
+•	Long-term financial planning.
+•	Advisor-led relationship management.
+Lead advisor profile for the demo: Tanaisha Udwadia.
+Keep professional credentials configurable. Do not publicly claim a certification, registration, or regulatory approval unless it has been verified and approved for publication.
+Page 3: Wealth solutions
+Build individual sections for:
+•	Portfolio monitoring.
+•	Financial goal planning.
+•	Investment allocation analysis.
+•	Retirement planning.
+•	Family financial planning.
+•	Insurance and protection overview.
+•	Client review management.
+•	Financial reporting.
+Make it clear that the platform supports financial organization and analysis. Do not imply that a dashboard replaces licensed professional advice.
+Page 4: Platform overview
+Show an interactive preview of the actual application modules.
+Each feature card should link to a relevant public explanation or login page.
+Do not expose private client records on public pages.
+Page 5: Contact
+Create a contact form with:
+•	Full name.
+•	Email.
+•	Phone, optional.
+•	Area of interest.
+•	Message.
+•	Consent checkbox.
+Validate the fields, display clear submission status, and store submissions only through an appropriately secured backend. Do not claim an email was sent unless a real email integration confirms it.
+Page 6: Legal and trust pages
+Create:
+•	Privacy Policy.
+•	Terms of Use.
+•	Cookie and consent preferences where applicable.
+•	Data Handling Policy.
+•	Security Overview.
+•	Disclaimers.
+Use clearly marked draft policies requiring review before production. Do not invent compliance certifications or guarantee absolute security.
+5. Authentication and account access
+Page 7: Sign-in page
+Create a premium split-screen login layout.
+Left panel: CapitalVest brand, tagline, elegant background visual, and a short description of the platform.
+Right panel: A clean sign-in card.
+Include:
+•	Email.
+•	Password.
+•	Show/hide password.
+•	Remember-me option where appropriate.
+•	Forgot Password.
+•	Sign In.
+•	Continue with Google.
+•	Create Account.
+•	Links to the terms and privacy policy.
+Show clear errors for invalid credentials, missing fields, unverified email where applicable, and network failures.
+Do not store plaintext passwords or use a fake login that accepts any credentials.
+Page 8: Create account
+Fields:
+•	Full name.
+•	Email.
+•	Password.
+•	Confirm password.
+•	Account type, if self-registration is enabled.
+•	Terms acceptance.
+Validate password strength and matching fields.
+For security, new users must not be able to grant themselves administrator or advisor privileges by selecting a role during registration.
+Create an administrator-controlled invitation or account approval process for privileged roles.
+Page 9: Password recovery
+Allow the user to request a password-reset email through Firebase Authentication.
+Show neutral confirmation messages and useful error states.
+Page 10: First-time onboarding
+After successful authentication, guide the user through onboarding.
+For advisors:
+1.	Complete profile.
+2.	Set firm details and preferences.
+3.	Configure reporting currency and time zone.
+4.	Connect a spreadsheet or import sample data.
+5.	Review data mapping.
+6.	Open the dashboard.
+For clients:
+1.	Confirm basic profile details.
+2.	Review assigned advisor and contact information.
+3.	View assigned financial goals.
+4.	Review portfolio information.
+5.	Open the client dashboard.
+Allow onboarding to be resumed if incomplete.
+6. Application shell and navigation
+After login, display a dedicated application layout separate from the public marketing website.
+Desktop layout
+Use a persistent dark navy sidebar, a white or ivory main workspace, and a clean top navigation bar.
+Sidebar sections:
+Overview
+•	Dashboard.
+Client Management
+•	Clients.
+•	Prospects.
+•	Meetings and Reviews.
+•	Tasks and Follow-ups.
+Wealth Management
+•	Portfolios.
+•	Asset Allocation.
+•	Financial Goals.
+•	Financial Health.
+•	Risk Monitoring.
+Operations
+•	Data Hub.
+•	Spreadsheet Sync.
+•	Reports.
+•	Documents.
+Administration
+•	Team and Access.
+•	Audit Log.
+•	Settings.
+Do not include a functional AI Advisor module in this version.
+Top bar:
+•	Global search.
+•	Date-range selector.
+•	Notifications.
+•	Data synchronization status.
+•	Help.
+•	Profile menu.
+Add responsive mobile navigation and tablet layouts.
+The sidebar should collapse to icons and expand on demand. Tooltips should identify collapsed navigation items.
+Every route must support direct navigation, browser refresh, loading, and appropriate unauthorized-access handling.
+7. Advisor dashboard
+Page 11: Wealth management command centre
+This is the main screen after an advisor logs in.
+Header:
+“Good morning, Tanaisha” or a greeting based on the current time.
+Subtitle:
+“Here is your wealth management overview.”
+Include a date filter:
+•	Today.
+•	Last 7 days.
+•	Last 30 days.
+•	This quarter.
+•	This financial year.
+•	Custom range.
+Use realistic demo data until a real data source is connected.
+Summary cards
+Show:
+1.	Total Assets Under Management (AUM).
+2.	Total Portfolio Value.
+3.	Total Invested Capital.
+4.	Unrealized Gain/Loss.
+5.	Number of Active Clients.
+6.	Financial Goals on Track.
+7.	Pending Client Reviews.
+8.	Open Risk Alerts.
+Each metric should display its calculation definition, current value, and relevant comparison when sufficient historical data exists.
+Do not fabricate historical percentage changes if no comparison data exists.
+Charts and visualizations
+Include:
+•	Portfolio value over time.
+•	Asset allocation donut chart.
+•	Portfolio distribution by client.
+•	Equity, debt, cash, gold, and other supported asset categories.
+•	Goal completion progress.
+•	Monthly contributions and withdrawals.
+•	Client review completion.
+•	Risk alert distribution.
+All charts should respond to available filters, have clear labels, provide accessible legends, and handle missing data gracefully.
+Recent activity
+Display a chronological feed of events such as:
+•	New client added.
+•	Portfolio record updated.
+•	Spreadsheet synchronization completed.
+•	Client review scheduled.
+•	Risk alert created.
+•	Report generated.
+Use actual stored activity events. Do not generate fake events on every refresh.
+Action centre
+Include working quick actions:
+•	Add Client.
+•	Add Portfolio Record.
+•	Create Financial Goal.
+•	Schedule Review.
+•	Import Spreadsheet.
+•	Generate Report.
+Data status strip
+Show:
+•	Data source.
+•	Last successful sync.
+•	Current sync status.
+•	Number of records imported.
+•	Number of records with validation issues.
+•	A View Details action.
+Distinguish between demo data, manually imported data, and live-synchronized data.
+8. Client relationship management
+Page 12: Client directory
+Create a searchable, filterable client directory.
+Columns:
+•	Client ID.
+•	Client name.
+•	Primary advisor.
+•	Client category.
+•	Portfolio value.
+•	Investment objective.
+•	Risk profile.
+•	Next review.
+•	Relationship status.
+Filters:
+•	Active, inactive, and prospective.
+•	Advisor.
+•	Risk category.
+•	Portfolio range.
+•	Review due date.
+•	Client segment.
+Support sorting, pagination, saved filters, and export of authorized records.
+Actions:
+•	Add client.
+•	View details.
+•	Edit.
+•	Archive.
+•	Schedule review.
+Use a confirmation dialog for destructive actions. Prefer archiving over permanent deletion.
+Page 13: Add or edit client
+Create a comprehensive client form.
+Sections:
+Personal profile
+•	Client ID, generated automatically.
+•	Full name.
+•	Date of birth, optional.
+•	Email.
+•	Phone.
+•	City.
+•	Occupation.
+•	Relationship start date.
+•	Primary advisor.
+•	Relationship status.
+Financial profile
+•	Annual income band, optional.
+•	Investment experience.
+•	Investment horizon.
+•	Investment preferences.
+•	Investment objectives.
+•	Liquidity requirements.
+•	Risk profile.
+•	Risk assessment date.
+Planning information
+•	Financial goals.
+•	Planned retirement age, optional.
+•	Emergency fund target, optional.
+•	Insurance review status.
+•	Preferred review frequency.
+Administrative
+•	Assigned documents.
+•	Internal notes.
+•	Consent status.
+•	Last updated by.
+•	Created date.
+Validate fields and provide save, cancel, and save-and-open-profile actions.
+Restrict sensitive fields to authorized users. Avoid collecting unnecessary personal information.
+Page 14: Client 360 profile
+Create a detailed profile for every client.
+Tabs:
+1.	Overview.
+2.	Portfolio.
+3.	Financial Goals.
+4.	Financial Health.
+5.	Risk Profile.
+6.	Activity.
+7.	Meetings and Reviews.
+8.	Documents.
+The overview should show client information, portfolio summary, recent performance, risk profile, goal progress, upcoming reviews, and recent activity.
+The portfolio tab must show linked holdings.
+The activity tab must show a real audit-friendly timeline.
+The documents tab must support securely uploaded files and metadata, with appropriate access controls.
+Provide Edit Client, Add Holding, Add Goal, Schedule Review, Generate Report, and Archive Client actions.
+Never allow one client to access another client's information by manipulating a URL.
+9. Prospect pipeline and client engagement
+Page 15: Prospects
+Build a lightweight CRM pipeline.
+Stages:
+•	New Lead.
+•	Contacted.
+•	Meeting Scheduled.
+•	Proposal or Review.
+•	Onboarding.
+•	Converted.
+•	Closed or Lost.
+Display the pipeline as both a board and a table.
+Allow prospects to be created, edited, reassigned, and moved between stages.
+Record source, expected next action, meeting date, assigned advisor, and notes.
+Track conversion counts and rates using actual stored records.
+Page 16: Meetings, reviews, and follow-ups
+Include:
+•	Calendar view.
+•	List view.
+•	Upcoming meetings.
+•	Overdue follow-ups.
+•	Completed reviews.
+•	Client review history.
+Allow users to create, reschedule, complete, and cancel meetings.
+Meeting fields:
+•	Client.
+•	Advisor.
+•	Date and time.
+•	Meeting type.
+•	Agenda.
+•	Notes.
+•	Outcome.
+•	Follow-up tasks.
+Support internal reminders and in-app notifications. External calendar synchronization should only be marked active when a real calendar integration has been configured.
+10. Portfolio management
+Page 17: Portfolio overview
+Show a consolidated portfolio view with:
+•	Current market value.
+•	Total invested amount.
+•	Unrealized gain or loss.
+•	Realized gain or loss, when transaction records support it.
+•	Absolute return.
+•	Annualized return, when sufficient date information exists.
+•	Asset allocation.
+•	Sector allocation for applicable assets.
+•	Portfolio history.
+Support client filters, account filters, asset categories, and date ranges.
+Page 18: Holdings register
+Create a table with:
+•	Holding ID.
+•	Client.
+•	Asset name.
+•	Asset class.
+•	Symbol or identifier.
+•	Quantity.
+•	Average purchase price.
+•	Current price.
+•	Invested value.
+•	Current market value.
+•	Gain/loss.
+•	Portfolio weight.
+•	Last price update.
+Include search, sort, filters, add holding, edit holding, import, and export.
+For market value, calculate quantity multiplied by current price when the asset is quantity-based.
+For invested value, use the correct cost-basis method for the available records. Do not treat a current market value as invested capital.
+For percentage gain/loss, use the appropriate invested-cost denominator and handle zero or missing cost basis safely.
+Use verified market data only when a market-data provider is connected. Otherwise, clearly label prices as sample or manually entered values.
+Page 19: Asset allocation analysis
+Provide:
+•	Donut chart by asset class.
+•	Allocation by individual holding.
+•	Allocation by client.
+•	Target versus actual allocation.
+•	Allocation drift.
+•	Cash allocation.
+•	Concentration indicators.
+Allow users to configure illustrative or client-specific target allocations.
+Flag deviations using configurable thresholds. Do not automatically execute trades or recommend specific securities.
+11. Financial goals and planning
+Page 20: Financial goals
+Support goals such as:
+•	Retirement.
+•	Home purchase.
+•	Child's education.
+•	Emergency fund.
+•	Family protection.
+•	Travel.
+•	Other custom goals.
+Each goal must include:
+•	Client.
+•	Goal name.
+•	Target amount.
+•	Current saved amount.
+•	Target date.
+•	Current monthly contribution, optional.
+•	Expected return assumption, optional.
+•	Priority.
+•	Linked assets, optional.
+•	Status.
+Display:
+•	Amount saved.
+•	Amount remaining.
+•	Percentage completed.
+•	Time remaining.
+•	Monthly contribution.
+•	Estimated progress toward the target.
+Use a transparent, documented projection formula for future-value calculations when an expected return assumption is provided.
+Clearly label assumptions and projected figures. Do not guarantee investment returns or present projections as certain outcomes.
+Provide goal creation, editing, completion, archiving, and client-level goal summaries.
+12. Financial health centre
+Page 21: Financial health scoring
+Create a transparent financial health assessment with a score from 0 to 100.
+Use configurable components such as:
+•	Emergency fund adequacy.
+•	Savings rate.
+•	Debt burden, if data is available.
+•	Goal funding progress.
+•	Portfolio diversification.
+•	Insurance review completeness.
+•	Liquidity coverage.
+Define the formula, component weights, data requirements, and scoring thresholds in an accessible methodology panel.
+Normalize component scores consistently and exclude unavailable inputs rather than treating missing data as zero. Recalculate the final score using the available component weights and disclose when the result is incomplete.
+Show:
+•	Overall score.
+•	Component breakdown.
+•	Strengths.
+•	Areas requiring attention.
+•	Historical score, when history exists.
+•	Recommended administrative follow-ups.
+Use wording such as “Planning indicator” or “Financial health estimate.” Do not present the score as a credit score, certified financial assessment, or guaranteed predictor of outcomes.
+Allow authorized advisors to record an assessment date and add notes.
+13. Risk monitoring and alerts
+Page 22: Risk monitoring centre
+Build a configurable monitoring system with alerts for:
+•	Allocation drift beyond a chosen threshold.
+•	Concentration in a single holding or asset class.
+•	Financial goals falling behind their projected timeline.
+•	Missing or stale portfolio prices.
+•	Overdue client reviews.
+•	Missing financial profile information.
+•	Failed spreadsheet synchronization.
+•	Inconsistent or duplicate imported records.
+Each alert must show:
+•	Alert ID.
+•	Client or record involved.
+•	Alert category.
+•	Severity.
+•	Detection date.
+•	Reason.
+•	Relevant values.
+•	Suggested administrative next step.
+•	Assigned person.
+•	Status.
+Alert states:
+•	Open.
+•	In Progress.
+•	Resolved.
+•	Dismissed.
+Allow authorized users to acknowledge, assign, resolve, and document alerts.
+Use deterministic rules based on actual stored data. Never claim that an external market event or a portfolio risk has been detected unless the relevant source is available.
+Provide a settings page to configure supported thresholds.
+14. Data Hub and spreadsheet integration
+Page 23: Data Hub
+This is a core feature of CapitalVest.
+Create a dedicated page for connecting and managing financial data sources.
+Display connection cards for:
+•	Google Sheets.
+•	Excel .xlsx upload.
+•	CSV upload.
+•	Manual data entry.
+For every source, display:
+•	Connection state.
+•	Source name.
+•	Last successful sync.
+•	Last attempted sync.
+•	Imported record count.
+•	Validation issues.
+•	Available actions.
+Do not mark an unconfigured source as connected.
+Page 24: Spreadsheet mapping and import
+Create a guided spreadsheet import wizard.
+Step 1: Select source
+Allow the user to upload an Excel workbook or CSV file. Also provide a separate Google Sheets connection flow.
+Step 2: Preview
+Show a preview of the detected worksheet, headers, and rows.
+Step 3: Select worksheet
+Allow the user to choose a worksheet where applicable.
+Step 4: Map columns
+Allow spreadsheet columns to be mapped to CapitalVest fields, such as:
+•	Client ID.
+•	Client Name.
+•	Holding ID.
+•	Asset Name.
+•	Asset Class.
+•	Quantity.
+•	Average Purchase Price.
+•	Current Price.
+•	Goal Target.
+•	Current Savings.
+•	Target Date.
+Support saved mapping templates for future imports.
+Step 5: Validate
+Check:
+•	Required columns.
+•	Missing values.
+•	Invalid dates.
+•	Invalid numbers.
+•	Negative quantities where not permitted.
+•	Invalid client references.
+•	Duplicate identifiers.
+•	Unsupported asset classes.
+•	Conflicting records.
+Step 6: Preview changes
+Show how many records will be created, updated, skipped, or rejected.
+Step 7: Confirm import
+Require explicit user confirmation before modifying existing records.
+Step 8: Import report
+Display the final results and allow the user to download an error report.
+An invalid row must not silently corrupt the entire dataset.
+Page 25: Live spreadsheet synchronization
+Support Google Sheets synchronization through an authenticated, authorized connection.
+Allow an advisor to select a spreadsheet and worksheet, map columns, and configure a synchronization interval or manual refresh.
+Provide:
+•	Sync Now.
+•	Pause Sync.
+•	Resume Sync.
+•	View History.
+•	Review Conflicts.
+•	Disconnect Source.
+When synchronization succeeds, update the relevant database records and refresh dependent dashboard metrics and charts.
+When synchronization fails, preserve the last successful dataset and display the error clearly.
+Prevent duplicate imports using stable record identifiers. Track source timestamps, import versions, and record provenance.
+Use idempotent synchronization and conflict handling. If a spreadsheet row conflicts with a manually edited record, show a comparison and require a defined resolution policy instead of silently overwriting it.
+For Google Sheets, use an authorized API integration with the required permissions.
+For a locally uploaded Excel file, explain that uploading it imports a snapshot. Subsequent edits to the original local file cannot automatically reach the website. Require re-upload or implement a separately configured cloud-drive synchronization workflow.
+If a cloud-hosted Excel workbook requires Microsoft Graph or OneDrive integration, build a separate integration setup flow rather than pretending the Google Sheets connector provides live Excel synchronization.
+Never claim real-time synchronization if the implemented mechanism only checks periodically.
+Page 26: Sync history and audit trail
+Show a history table with:
+•	Sync ID.
+•	Data source.
+•	Start time.
+•	End time.
+•	Duration.
+•	Records created.
+•	Records updated.
+•	Records skipped.
+•	Failed rows.
+•	Status.
+•	Initiated by.
+Allow users to inspect error details and retry failed operations.
+Keep an auditable history of important data imports, edits, exports, and administrative actions.
+15. Reports and document centre
+Page 27: Reports library
+Create a report generation centre with:
+•	Client portfolio report.
+•	Client financial health report.
+•	Financial goal progress report.
+•	Asset allocation report.
+•	Client review summary.
+•	Portfolio change report.
+•	Risk alert report.
+•	Advisor activity report.
+•	Spreadsheet synchronization report.
+Provide filters for client, date range, report type, and status.
+Support:
+•	Generate.
+•	Preview.
+•	Download PDF.
+•	Export CSV or Excel-compatible data where relevant.
+•	Archive.
+•	Regenerate.
+Only display a report as ready after the file has actually been generated and stored or made available for download.
+Page 28: Professional client report
+Generate a refined PDF report with:
+•	CapitalVest branding.
+•	Client name and report date.
+•	Advisor details.
+•	Portfolio summary.
+•	Invested value and current value.
+•	Gain/loss calculations.
+•	Asset allocation chart.
+•	Goal progress.
+•	Financial health indicators, if available.
+•	Open planning alerts.
+•	Important assumptions.
+•	Data source and last-updated date.
+•	Appropriate disclaimers.
+Include a clean cover page, page numbers, footnotes, and readable tables.
+Do not invent market prices, investment returns, or missing historical information.
+Page 29: Documents
+Provide secure document management with:
+•	Document name.
+•	Document category.
+•	Associated client.
+•	Upload date.
+•	Uploaded by.
+•	Access permissions.
+•	Document status.
+Support upload, preview where technically supported, download, archive, and deletion with confirmation.
+Use secure storage, file-type validation, file-size limits, and authorization checks. Do not expose private document links publicly.
+16. Notifications and tasks
+Page 30: Notification centre
+Display notifications for:
+•	Upcoming client reviews.
+•	Overdue tasks.
+•	Assigned risk alerts.
+•	Successful or failed synchronization.
+•	Completed reports.
+•	Important profile updates.
+Support unread/read states, mark all as read, filters, and navigation to the relevant record.
+Create notifications from real events rather than fabricated activity.
+Page 31: Task manager
+Support:
+•	Task title.
+•	Description.
+•	Related client.
+•	Assigned team member.
+•	Due date.
+•	Priority.
+•	Status.
+•	Completion notes.
+Provide list and board views, filters, overdue indicators, and task completion tracking.
+17. Team and access management
+Page 32: Team management
+Provide an administrator-only team directory.
+Roles:
+•	Administrator.
+•	Advisor.
+•	Operations.
+•	Read-only reviewer.
+•	Client.
+Define permissions by role.
+Administrators manage accounts and roles. Advisors access assigned client records. Operations staff receive only the access needed for their work. Read-only reviewers cannot modify records. Clients may access only their own permitted information.
+Use server-side authorization and Firestore security rules. Hiding a button is not sufficient authorization.
+Provide secure invitation, account activation, role assignment, deactivation, and access review.
+Do not permit users to elevate their own permissions.
+Page 33: Audit log
+Record important events:
+•	Authentication and account changes where supported.
+•	Client record creation and updates.
+•	Portfolio changes.
+•	Goal changes.
+•	Spreadsheet imports and synchronization.
+•	Report generation and downloads where practical.
+•	Permission changes.
+•	Archiving and deletion.
+Include actor, timestamp, action, affected record, and outcome.
+Restrict audit log access to authorized roles. Do not store passwords, secret keys, or unnecessary sensitive information in logs.
+18. Settings and profile
+Page 34: Personal settings
+Include:
+•	Profile information.
+•	Profile photo, optional.
+•	Password and authentication settings.
+•	Notification preferences.
+•	Display preferences.
+•	Light/dark theme.
+•	Currency and number formatting.
+•	Date format.
+•	Time zone.
+•	Accessibility preferences.
+Page 35: Firm settings
+For authorized administrators, include:
+•	Firm name.
+•	Logo.
+•	Contact information.
+•	Default currency.
+•	Reporting preferences.
+•	Financial health scoring weights.
+•	Risk thresholds.
+•	Default report branding.
+•	Data retention settings.
+•	Integration settings.
+Default currency: INR.
+Default time zone: Asia/Kolkata.
+Page 36: Account and session management
+Provide:
+•	Sign out.
+•	Sign out from other sessions where supported.
+•	Review connected accounts.
+•	Review permissions.
+•	Account deactivation request.
+•	Privacy and data export options where applicable.
+Confirm logout and return the user to the public homepage or login screen.
+Invalidate or terminate the relevant session using the authentication provider. Do not rely only on a client-side redirect.
+19. Client-facing dashboard
+Create a distinct dashboard for users with the Client role.
+Clients should not see advisor administration tools, other clients, internal notes, team management, or restricted risk commentary.
+The client dashboard should contain:
+•	Welcome message.
+•	Portfolio value and available historical changes.
+•	Investment allocation.
+•	Goal progress.
+•	Financial health overview, if shared.
+•	Upcoming meetings.
+•	Documents shared with the client.
+•	Recent client-visible updates.
+•	Assigned advisor contact information.
+•	Downloadable client reports.
+Allow clients to view permitted holdings and financial goals.
+Do not allow clients to change advisor-only portfolio records or import the firm's spreadsheets.
+Clearly distinguish information that is available for viewing from information that can be edited or submitted for advisor review.
+20. Demo mode and initial data
+Seed the application with a coherent, fictional Indian demo dataset.
+Use names such as:
+•	Aarav Mehta.
+•	Ananya Shah.
+•	Rohan Desai.
+•	Meera Patel.
+•	Kavya Joshi.
+•	Arjun Trivedi.
+•	Nisha Iyer.
+•	Vivaan Shah.
+Include a small but realistic set of clients, prospects, holdings, goals, tasks, reviews, and risk alerts.
+Use illustrative INR values and dates. Keep the relationships between clients, portfolios, holdings, and goals internally consistent.
+Add a clear Demo Data label and a demo-data management screen.
+The demo dataset should demonstrate all major charts, filters, report types, and alert conditions.
+Never mix demo records with production records. Include an explicit option to reset demo data, restricted to an authorized administrator.
+Do not create public demo accounts with predictable passwords or expose a shared administrator login.
+21. Core calculation and data integrity rules
+Implement reusable calculation functions and test them.
+•	Portfolio market value: calculate from valid quantities and prices, or use an explicitly defined valuation method for other asset types.
+•	Total invested capital: calculate from available cost-basis or transaction data.
+•	Unrealized gain/loss: market value minus the relevant cost basis.
+•	Absolute return percentage: gain/loss divided by invested capital, where the denominator is valid.
+•	Asset allocation: holding market value divided by total portfolio value.
+•	Goal progress: current saved amount divided by target amount, with appropriate handling of zero targets and values above 100%.
+•	Financial health: calculate using the documented, configurable scoring methodology.
+•	Risk alerts: generate using stored values and configured thresholds.
+•	Dashboard totals: derive from authorized, validated records.
+•	Historical changes: compare equivalent date ranges only when valid historical snapshots are available.
+Use decimal-safe financial calculations where appropriate. Format displayed INR values consistently.
+Do not use hard-coded numbers to make charts appear functional. Charts and summary cards must derive from stored data or a clearly identified demo dataset.
+When data is incomplete, show “Not available” or an equivalent explanatory state rather than silently inventing values.
+22. User experience and accessibility
+Implement:
+•	Responsive layouts for desktop, tablet, and mobile.
+•	Loading skeletons.
+•	Empty states with helpful next actions.
+•	Clear validation messages.
+•	Error states with retry options.
+•	Success confirmations after confirmed operations.
+•	Confirmation dialogs for destructive actions.
+•	Keyboard navigation.
+•	Visible focus indicators.
+•	Accessible labels and semantic controls.
+•	Sufficient color contrast.
+•	Reduced-motion support.
+•	Consistent spacing and component styling.
+Provide a breadcrumb trail on nested pages.
+Preserve filters and relevant context when navigating back from a detail page.
+Use appropriate confirmation messages. Never show “Saved,” “Synced,” “Deleted,” or “Report generated” before the operation has actually succeeded.
+23. Security, privacy, and responsible financial presentation
+Implement:
+•	Firebase Authentication.
+•	Firestore security rules.
+•	Server-side role verification.
+•	Client-level record authorization.
+•	Input validation on both client and server.
+•	Secure file handling.
+•	Secrets management.
+•	Rate limiting where appropriate.
+•	Safe error messages.
+•	Audit trails for important operations.
+•	Least-privilege access.
+•	Protection against unauthorized record enumeration.
+Do not store sensitive financial information in browser local storage as the main database.
+Do not expose credentials in logs, source code, URLs, or frontend bundles.
+Use only fictional records for demonstration. Clearly separate development data from real client data.
+Do not present sample performance as actual investment performance. Include clear data freshness indicators, projection assumptions, and appropriate disclaimers.
+The platform should not place trades, move money, make guaranteed return claims, or represent unverified compliance as established fact.
+24. Required database structure
+Create a well-organized Firestore schema. Adapt collection names as necessary while preserving the data relationships.
+Suggested collections:
+•	users
+•	firms
+•	clients
+•	prospects
+•	portfolios
+•	holdings
+•	transactions
+•	financialGoals
+•	financialHealthAssessments
+•	riskAlerts
+•	meetings
+•	tasks
+•	documents
+•	reports
+•	notifications
+•	dataSources
+•	syncJobs
+•	importJobs
+•	auditLogs
+•	appSettings
+Include stable IDs, creation timestamps, update timestamps, ownership, and source metadata where appropriate.
+Use consistent references between clients, portfolios, goals, holdings, advisors, and documents.
+Avoid storing multiple conflicting copies of the same calculated metric when it can be derived reliably from source records.
+Define indexes needed for common filters and queries.
+25. Final visual quality requirements
+The finished product should feel like a premium wealth management platform that an advisor could confidently demonstrate to a prospective client.
+The public website should feel refined, calm, and trustworthy.
+The dashboard should feel information-rich but uncluttered.
+Tables should be easy to scan. Charts should be beautiful and useful. Forms should feel simple despite handling complex information.
+Use polished transitions, thoughtful micro-interactions, strong visual hierarchy, consistent icons, and carefully spaced layouts.
+Do not make every page look like the same collection of generic cards. Use suitable variations such as tables, charts, timelines, calendars, Kanban boards, profile panels, report previews, and guided import steps.
+Prioritize substance and usability over decoration.
+26. Required end-to-end workflows
+Ensure the following workflows function from beginning to end.
+Workflow A: New advisor
+Public homepage → Sign up → Authenticate → Onboarding → Configure firm → Import or connect data → Dashboard.
+Workflow B: Client management
+Dashboard → Add Client → Save → Open Client 360 → Add Financial Goal → Schedule Review → Generate Client Report.
+Workflow C: Spreadsheet import
+Data Hub → Upload Excel file → Preview → Map columns → Validate → Review changes → Confirm import → Update database → Refresh dashboard → Download import results.
+Workflow D: Connected spreadsheet
+Data Hub → Authorize Google Sheets → Select spreadsheet and worksheet → Map columns → Configure synchronization → Sync → Review imported records → Refresh dashboard metrics → View sync history.
+Workflow E: Portfolio monitoring
+Client 360 → Add or update holding → Recalculate portfolio totals → Refresh allocation chart → Evaluate configured thresholds → Create an alert when warranted → Resolve alert.
+Workflow F: Financial planning
+Client 360 → Create goal → Enter target and current savings → Calculate progress → Display the result → Generate a goal report.
+Workflow G: Client access
+Administrator or authorized advisor assigns a client account → Client signs in → Client sees only permitted information → Client opens a report → Client signs out.
+Workflow H: Operations
+Task created → Assigned to a team member → Notification generated → Task completed → Activity history updated.
+Workflow I: Error recovery
+Spreadsheet sync fails → Error shown → Existing valid records preserved → User opens details → Corrects the issue → Retries → Successful sync recorded.
+Workflow J: Final session
+User opens profile menu → Reviews settings → Signs out → Returns to the public welcome or sign-in page.
+27. Testing and delivery checklist
+Before considering the application complete:
+1.	Test all public pages and internal routes.
+2.	Test registration, sign-in, Google authentication where configured, password recovery, and logout.
+3.	Verify role-based navigation and server-side authorization.
+4.	Test adding, editing, viewing, and archiving clients.
+5.	Test portfolio and financial goal calculations.
+6.	Test charts and dashboard filters against the underlying data.
+7.	Test Excel and CSV imports with valid and invalid rows.
+8.	Test Google Sheets authorization and synchronization when configured.
+9.	Verify that sync failures preserve existing valid records.
+10.	Test PDF generation and downloadable exports.
+11.	Test client access isolation.
+12.	Test empty, loading, success, and error states.
+13.	Test responsive layouts.
+14.	Fix compilation errors, broken links, missing dependencies, and browser console errors.
+15.	Verify that no AI Advisor or Gemini chatbot has been introduced into the interface.
+16.	Confirm that all demo data is labelled and that calculations are internally consistent.
+Final delivery
+Deliver the complete working CapitalVest application, not merely a design preview.
+Ensure the public homepage, authentication, advisor dashboard, client dashboard, portfolio management, financial planning, risk monitoring, spreadsheet data hub, reports, notifications, team permissions, settings, and logout are all connected.
+If a real external integration still requires authorization or configuration, state exactly what is missing and provide the setup flow. Do not disguise an unconfigured integration as operational.
+Start by generating the complete application architecture and building the public website, authentication, application shell, dashboard, and database. Then continue implementing all remaining modules and workflows until the full specification is satisfied.
+

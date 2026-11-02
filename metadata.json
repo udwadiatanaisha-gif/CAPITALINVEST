@@ -1,0 +1,8 @@
+{
+  "name": "Remix final-capitalinvest",
+  "description": "Imported from GitHub: udwadiatanaisha-gif/final-capitalinvest",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
